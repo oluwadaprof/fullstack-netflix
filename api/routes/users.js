@@ -92,7 +92,7 @@ router.get("/stats", async(req, res) => {
                 total: { $sum: 1 }
             }
         }])
-
+        res.status(200).json(data)
     } catch (error) {
         res.status(500).json(error)
     }
