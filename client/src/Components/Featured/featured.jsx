@@ -1,10 +1,35 @@
-import { Info, InfoOutlined, PlayArrow } from '@material-ui/icons'
+import { InfoOutlined, PlayArrow } from '@material-ui/icons'
 import React from 'react'
+import './featured.scss'
 import heroimage from "../../assets/offset_comp_772626-opt.jpg"
 
-const featured = () => {
+const featured = ({ type }) => {
   return (
     <div className='featured' >
+      {type && (
+        <div className="category">
+          <span>{type === 'movies' ? "Movies" : "Series"}</span>
+         <label className='custom-selector' htmlFor="">
+            <select name="genre" id="genre" >
+              <option>Genre</option>
+              <option value="adventure">Adventure</option>
+              <option value="comedy">Comedy</option>
+              <option value="crime">crime</option>
+              <option value="fantasy">fantasy</option>
+              <option value="historical">historical</option>
+              <option value="horror">horror</option>
+              <option value="romance">romance</option>
+              <option value="sci-fi">sci-fi</option>
+              <option value="thriller">thriller</option>
+              <option value="western">western</option>
+              <option value="animation">animation</option>
+              <option value="drama">drama</option>
+              <option value="documentary">documentary</option>
+            </select>
+         </label>
+          
+        </div>
+      )}
       <img src={heroimage} alt="" width="100%" />
 
       <div className="info">
@@ -15,12 +40,6 @@ const featured = () => {
           similique cupiditate recusandae aperiam velit
           repellat qui. Molestiae, magnam tenetur.
           Repudiandae animi id deleniti iure, tempora
-          dolor. Modi deleniti atque quidem accusamus
-          praesentium tempore recusandae impedit, expedita
-          voluptatibus vero rerum officiis explicabo quia
-          ipsum laborum doloremque asperiores distinctio!
-          Ea quas possimus numquam fugit incidunt consectetur ex iste voluptatum vel libero quisquam, sapiente dolorum modi rerum assumenda tempore officia. Itaque earum ut laborum veniam reprehenderit se
-          d veritatis nobis. Voluptatum.
         </span>
         <div className="buttons">
           <button className="play"><PlayArrow />
