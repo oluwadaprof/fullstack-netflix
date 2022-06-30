@@ -3,9 +3,9 @@ import './listitem.scss'
 
 const Listitem = () => {
     return (
-        <div className='list__item' >
-            item
-        </div>
+            <div className='list__item' >
+                item
+            </div>
     )
 }
 
