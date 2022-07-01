@@ -9,10 +9,7 @@ import Slider from "react-slick";
 
 function SamplePrevArrow(props) {
     const { onClick} = props;
-    
-    
-    return (
-       
+    return (   
         <ArrowBackIosOutlined onClick={onClick} className='slider__arrow left' /> 
     );
 }
@@ -20,11 +17,7 @@ function SamplePrevArrow(props) {
 
 function SampleNextArrow(props) {
     const { onClick } = props;
-  
-   
-   
     return (
-        
         <ArrowForwardIosOutlined onClick={onClick} className='slider__arrow right' /> 
     )     
 }
